@@ -1,0 +1,12 @@
+.side-menu-ul{
+    box-sizing: border-box;
+    li{
+        border-bottom: 1px solid var(--bg-grey-dark); 
+        padding: 1.6rem;
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 1rem;
+        }
+    }
+}

@@ -25,6 +25,8 @@
   --bg-grey-medium: #e6eaf0;
   --bg-grey-light: #f0f2f7;
   --bg-grey-lighter: #f9fafc;
+
+  --main-bg-color: var(--bg-grey-light);
 }
 
 /*mixins*/
@@ -59,18 +61,34 @@ html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 10px;
+  margin: 0;
+  padding: 0;
 }
 body {
   font-size: 1.2rem;
   color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+li {
+  outline: 0;
 }
 input {
-  border-radius: 2px;
+  border-radius: 0.2rem;
   border: 1px solid var(--bg-grey-dark);
   color: var(--text-primary);
-  padding: 5px;
+  padding: 0.8rem;
   font-size: 1.3rem;
-  line-height: 15px;
+  line-height: 1.5rem;
   text-align: left;
   font-weight: normal;
   &:disabled {
@@ -80,18 +98,33 @@ input {
     border-color: var(--bg-grey-light);
     cursor: not-allowed;
   }
-  &:valid {
-    border-color: var(--success);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-image: url("data:image/svg+xml,%3Csvg width='22px' height='11px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-56.000000, -59.000000%29' fill='%232EEC96'%3E%3Cpolygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-  }
-  &:invalid {
-    border-color: var(--error);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-image: url("data:image/svg+xml,%3Csvg width='22px' height='11px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
-  }
+}
+
+/*Application level style rules*/
+.app-wrap {
+  display: grid;
+  grid-template-columns: 20rem 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas:
+    "app-bar      app-bar       app-bar"
+    "app-menu     app-content   app-content"
+    "app-footer   app-footer    app-footer";
+}
+.app-bar-wrap {
+  grid-area: app-bar;
+}
+.app-menu-wrap {
+  background: #fff;
+  grid-area: app-menu;
+  border-right: 0.1rem solid var(--bg-grey-dark);
+}
+.app-content-area-wrap {
+  background: var(--main-bg-color);
+  grid-area: app-content;
+}
+.app-footer-wrap {
+  background: #aaa;
+  grid-area: app-footer;
 }
 
 .input-valid {
@@ -105,6 +138,24 @@ input {
   background-repeat: no-repeat;
   background-position: right;
   background-image: url("data:image/svg+xml,%3Csvg width='22px' height='11px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.search-wrap {
+  border-radius: 2px;
+  border: 1px solid var(--bg-grey-dark);
+  padding-left: 0.7rem;
+  background-color: var(--bg-grey-light);
+  input {
+    border: 0px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-image: url("assets/icon-set/search.svg");
+    padding-left: 2rem;
+    width: 100%;
+    background-color: var(--bg-grey-light);
+  }
+}
+.main-search {
+  width: 50rem;
 }
 
 .checkbox {
