@@ -2,6 +2,7 @@
 
 :root {
   /*Basic Colors*/
+  --white: #ffffff;
   --brand-primary: #0071bc;
   --brand-secondary: #3fa9f5;
   --success: #22ce8b;
@@ -27,6 +28,9 @@
   --bg-grey-lighter: #f9fafc;
 
   --main-bg-color: var(--bg-grey-light);
+
+  /*Table Colors*/
+  --table-row-hover: var(#99b4ce);
 
   /*button colors*/
   --primary-button-color: #1F7FFF;
@@ -102,6 +106,44 @@ input {
     cursor: not-allowed;
   }
 }
+
+/*Table style rules*/
+table{
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  border-collapse:separate; 
+  border-spacing: 1cm 0;
+}
+thead{
+  tr{background-color: transparent}
+}
+tbody{
+  tr{background-color: var(--white);}
+}
+tr{
+  border-radius: 0.2rem;
+}
+table, td { 
+  border: 0;
+} 
+th {
+  background: transparent;
+  border: 0;
+  font-weight: normal;
+  color: var(--text-secondary);
+}
+td {
+  vertical-align: center;
+  text-align: left;
+  padding: 1rem;
+  min-height: 3.5rem;
+  color: var(--text-primary);
+}
+tr:hover {background-color: var(--table-row-hover);}
+tr:nth-child(even) {background-color: var(--table-row-hover);}
+
 
 /*Application level style rules*/
 .app-wrap {
@@ -179,4 +221,8 @@ input {
     transform: rotate(45deg);
     content: "";
   }
+}
+.block{
+  display: block;
+  margin: 2rem;
 }
