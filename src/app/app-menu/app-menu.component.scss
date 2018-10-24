@@ -5,8 +5,13 @@
         padding: 1.6rem;
         display: flex;
         align-items: center;
+        cursor: pointer;
         img{
             margin-right: 1rem;
+        }
+        &:hover{
+            background-color: var(--primary-button-color);
+            color: #fff;
         }
     }
 }

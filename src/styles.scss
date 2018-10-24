@@ -27,6 +27,9 @@
   --bg-grey-lighter: #f9fafc;
 
   --main-bg-color: var(--bg-grey-light);
+
+  /*button colors*/
+  --primary-button-color: #1F7FFF;
 }
 
 /*mixins*/
@@ -102,9 +105,10 @@ input {
 
 /*Application level style rules*/
 .app-wrap {
+  height: 100vh;
   display: grid;
   grid-template-columns: 20rem 1fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: 6rem auto 4rem;
   grid-template-areas:
     "app-bar      app-bar       app-bar"
     "app-menu     app-content   app-content"

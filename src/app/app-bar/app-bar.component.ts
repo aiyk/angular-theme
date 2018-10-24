@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-app-bar',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppBarComponent implements OnInit {
 
+  @Output() toggleMenu = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleMenu_click(){
+    this.toggleMenu.emit(true);
   }
 
 }
