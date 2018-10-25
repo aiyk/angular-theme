@@ -30,7 +30,7 @@
   --main-bg-color: var(--bg-grey-light);
 
   /*Table Colors*/
-  --table-row-hover: var(#99b4ce);
+  --table-row-hover: #d8e5f1;
 
   /*button colors*/
   --primary-button-color: #1F7FFF;
@@ -108,41 +108,45 @@ input {
 }
 
 /*Table style rules*/
-table{
+.table{
   width: 100%;
   position: relative;
-  border-collapse: collapse;
-  font-size: 1.2rem;
-  border-collapse:separate; 
-  border-spacing: 1cm 0;
+  font-size: 1.4rem;
 }
-thead{
-  tr{background-color: transparent}
+.thead{
+  .tr{
+    background-color: transparent;
+  }
 }
-tbody{
-  tr{background-color: var(--white);}
+.tbody{
+  .tr{background-color: var(--white);}
 }
-tr{
+.tr{
+  display: grid;
+  margin-bottom: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-auto-flow: column;
   border-radius: 0.2rem;
-}
-table, td { 
-  border: 0;
+  padding: 0.3rem 1rem;
 } 
-th {
+.th {
   background: transparent;
-  border: 0;
   font-weight: normal;
   color: var(--text-secondary);
+  font-size: 1.2rem;
 }
-td {
+.td {
+  display: flex;
+  align-items: center;
   vertical-align: center;
   text-align: left;
-  padding: 1rem;
   min-height: 3.5rem;
   color: var(--text-primary);
 }
-tr:hover {background-color: var(--table-row-hover);}
-tr:nth-child(even) {background-color: var(--table-row-hover);}
+.tr:hover {background-color: var(--table-row-hover);}
+// .tr:nth-child(even) {background-color: var(--table-row-hover);}
 
 
 /*Application level style rules*/
@@ -222,7 +226,7 @@ tr:nth-child(even) {background-color: var(--table-row-hover);}
     content: "";
   }
 }
-.block{
+.block-element{
   display: block;
-  margin: 2rem;
+  margin: 4rem 2rem 2rem 2rem;
 }
