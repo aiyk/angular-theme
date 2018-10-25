@@ -6,12 +6,11 @@
   --brand-primary: #0071bc;
   --brand-secondary: #3fa9f5;
   --success: #22ce8b;
-  --error: #f46363;
-  --warning: #ffcd54;
   --success-lite: lighten(var(--success), 10%);
+  --error: #f46363;
   --error-lite: lighten(var(--error), 10%);
+  --warning: #ffcd54;
   --warning: lighten(var(--warning), 10%);
-  --input-disabled-bg: #f9fafc;
 
   /*Text Colors*/
   --text-primary: #040e28;
@@ -19,7 +18,7 @@
   --disabled: #a6b1c2;
 
   /*Drop shadow color*/
-  --shadow: rgba(148, 148, 148, 0.25);
+  --shadow-color: rgba(148, 148, 148, 0.25);
 
   /*Background Greys*/
   --bg-grey-dark: #dce1ea;
@@ -34,30 +33,33 @@
 
   /*button colors*/
   --primary-button-color: #1F7FFF;
+
+  
+  --input-disabled-bg: var(--bg-grey-lighter);
 }
 
 /*mixins*/
-@mixin shadow-x1 {
+.shadow-x1 {
   -webkit-box-shadow: 0 1px 2px var(--shadow);
   -moz-box-shadow: 0 1px 2px var(--shadow);
   box-shadow: 0 1px 2px var(--shadow);
 }
-@mixin shadow-x2 {
+.shadow-x2 {
   -webkit-box-shadow: 0 2px 4px var(--shadow);
   -moz-box-shadow: 0 2px 4px var(--shadow);
   box-shadow: 0 2px 4px var(--shadow);
 }
-@mixin shadow-x3 {
+.shadow-x3 {
   -webkit-box-shadow: 0 4px 8px var(--shadow);
   -moz-box-shadow: 0 4px 8px var(--shadow);
   box-shadow: 0 4px 8px var(--shadow);
 }
-@mixin shadow-x4 {
+.shadow-x4 {
   -webkit-box-shadow: 0 6px 12px var(--shadow);
   -moz-box-shadow: 0 6px 12px var(--shadow);
   box-shadow: 0 6px 12px var(--shadow);
 }
-@mixin shadow-x5 {
+.shadow-x5 {
   -webkit-box-shadow: 0 8px 16px var(--shadow);
   -moz-box-shadow: 0 8px 16px var(--shadow);
   box-shadow: 0 8px 16px var(--shadow);
@@ -152,6 +154,7 @@ input {
 /*Application level style rules*/
 .app-wrap {
   height: 100vh;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 20rem 1fr 1fr;
   grid-template-rows: 6rem auto 4rem;
@@ -167,10 +170,14 @@ input {
   background: #fff;
   grid-area: app-menu;
   border-right: 0.1rem solid var(--bg-grey-dark);
+  max-height: 87vh;
+  overflow-y: scroll;
 }
 .app-content-area-wrap {
   background: var(--main-bg-color);
   grid-area: app-content;
+  max-height: 87vh;
+  overflow-y: scroll;
 }
 .app-footer-wrap {
   background: #aaa;
@@ -229,4 +236,10 @@ input {
 .block-element{
   display: block;
   margin: 4rem 2rem 2rem 2rem;
+}
+.sect-title{
+  font-size: 2.4rem;
+  line-height: 28px;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
 }

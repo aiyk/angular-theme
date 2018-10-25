@@ -1,4 +1,35 @@
-<div class="block-element">
+<section class="block-element">
+  <div class="sect-title">Global Colors</div>
+  <div class="table">
+    <div class="thead">
+      <div class="tr">
+        <div class="th">Color</div>
+        <div class="th">Variable</div>
+        <div class="th">Color Code</div>
+        <div class="th">Description</div>
+      </div>
+    </div>
+
+    <div class="tbody">
+      <div *ngFor="let color of colors" class="tr">
+        <div class="td">
+          <div [ngStyle]="{'background-color':color.colorCode}" class="show-color"></div>
+        </div>
+        <div class="td">
+          <code>{{color.variableName}}</code>
+        </div>
+        <div class="td">
+          <code>{{color.colorCode}}</code>
+        </div>
+        <div class="td">
+          <span class="desc">{{color.desc}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="block-element">
   <div class="table">
     <div class="thead">
       <div class="tr">
@@ -44,4 +75,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
