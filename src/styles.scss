@@ -38,31 +38,31 @@
   --input-disabled-bg: var(--bg-grey-lighter);
 }
 
-/*mixins*/
+/*shadow rules*/
 .shadow-x1 {
-  -webkit-box-shadow: 0 1px 2px var(--shadow);
-  -moz-box-shadow: 0 1px 2px var(--shadow);
-  box-shadow: 0 1px 2px var(--shadow);
+  -webkit-box-shadow: 0 1px 2px var(--shadow-color);
+  -moz-box-shadow: 0 1px 2px var(--shadow-color);
+  box-shadow: 0 1px 2px var(--shadow-color);
 }
 .shadow-x2 {
-  -webkit-box-shadow: 0 2px 4px var(--shadow);
-  -moz-box-shadow: 0 2px 4px var(--shadow);
-  box-shadow: 0 2px 4px var(--shadow);
+  -webkit-box-shadow: 0 2px 4px var(--shadow-color);
+  -moz-box-shadow: 0 2px 4px var(--shadow-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
 }
 .shadow-x3 {
-  -webkit-box-shadow: 0 4px 8px var(--shadow);
-  -moz-box-shadow: 0 4px 8px var(--shadow);
-  box-shadow: 0 4px 8px var(--shadow);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-color);
+  -moz-box-shadow: 0 4px 8px var(--shadow-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 .shadow-x4 {
-  -webkit-box-shadow: 0 6px 12px var(--shadow);
-  -moz-box-shadow: 0 6px 12px var(--shadow);
-  box-shadow: 0 6px 12px var(--shadow);
+  -webkit-box-shadow: 0 6px 12px var(--shadow-color);
+  -moz-box-shadow: 0 6px 12px var(--shadow-color);
+  box-shadow: 0 6px 12px var(--shadow-color);
 }
 .shadow-x5 {
-  -webkit-box-shadow: 0 8px 16px var(--shadow);
-  -moz-box-shadow: 0 8px 16px var(--shadow);
-  box-shadow: 0 8px 16px var(--shadow);
+  -webkit-box-shadow: 0 8px 16px var(--shadow-color);
+  -moz-box-shadow: 0 8px 16px var(--shadow-color);
+  box-shadow: 0 8px 16px var(--shadow-color);
 }
 
 /*html element level style rules*/

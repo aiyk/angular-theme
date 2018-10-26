@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShadowDefComponent implements OnInit {
 
+  shadows: any[] = [
+    "shadow-x1",
+    "shadow-x2",
+    "shadow-x3",
+    "shadow-x4",
+    "shadow-x5"
+  ];
+
   constructor() { }
 
   ngOnInit() {

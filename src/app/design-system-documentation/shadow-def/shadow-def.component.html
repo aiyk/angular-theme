@@ -1,3 +1,15 @@
-<p>
-  shadow-def works!
-</p>
+<section class="block-element">
+  <div class="sect-title">Shadow Definations</div>
+
+  <div class="items-container">
+    <div *ngFor="let shadow of shadows" class="shadow-item-wrap">
+      <div [class]="shadow">
+        <div class="shadow-box"></div>
+      </div>
+      <div class="labels">
+        <label>Class Name</label>
+        <code>{{shadow}}</code>  
+      </div> 
+    </div>
+  </div>
+</section>  

@@ -1,0 +1,25 @@
+.items-container{
+    display: flex;
+    flex-wrap: wrap;
+    .shadow-item-wrap{
+        display: flex;
+        margin-bottom: 2rem;
+        margin-right: 4rem; 
+        align-items: center;
+        font-size: 1.6rem; 
+        .shadow-box{ 
+            width: 10rem;
+            height: 10rem;
+            background: var(--white);
+        }
+        label{
+            display: block;
+            font-weight: bold;
+            margin-left: 1rem; 
+        }
+        code{
+            color: var(--text-secondary);
+            margin-left: 1rem;
+        }
+    }
+}
