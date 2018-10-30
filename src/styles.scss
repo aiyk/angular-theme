@@ -299,7 +299,10 @@ input {
       .head-item{
         display: flex;
         align-items: center;
-        margin-left: 3rem;
+        margin-left: 1rem;
+        label{
+          margin-right: 3rem; 
+        }
         .head-val{
           font-weight: bold;
           margin-left: 1rem;
@@ -484,4 +487,9 @@ button{
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("assets/icon-set/list.svg"); 
+}
+.btn-elipsis-v-center{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("assets/icon-set/elipsis-v.svg");
 }
