@@ -147,6 +147,29 @@ input {
   min-height: 3.5rem;
   color: var(--text-primary);
 }
+.td-actions{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.td-user{
+  display: flex;
+  align-items: center;
+  .td-img-wrap{
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--bg-grey-medium);
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+}
 .tr:hover {background-color: var(--table-row-hover);}
 // .tr:nth-child(even) {background-color: var(--table-row-hover);}
 
@@ -238,8 +261,47 @@ input {
   margin: 4rem 2rem 2rem 2rem;
 }
 .sect-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   font-size: 2.4rem;
   line-height: 28px;
   color: var(--text-primary);
   margin-bottom: 2rem;
+  .sect-headers{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    .headers-block{
+      display: flex;
+      align-items: center;
+      margin-left: 2rem;
+      .head-item{
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+        .head-val{
+          font-weight: bold;
+          margin-left: 1rem;
+        }
+        .tbl-right-actions{
+          background-color: var(--white);
+          border: 0.1rem solid var(--bg-grey-dark);
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 0.1rem 1rem; 
+          cursor: pointer; 
+          min-height: 2.5rem;
+          label{
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
 }

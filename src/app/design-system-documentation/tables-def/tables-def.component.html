@@ -1,0 +1,62 @@
+<section class="block-element">
+  <div class="sect-title">
+    <span>Tables</span>
+    <div class="sect-headers">
+      <div class="headers-block">
+        <div class="head-item">
+          <label>12,000,000 Total</label>
+        </div>
+        <div class="head-item">
+          <label>Sort by:</label>
+          <div class="head-val">Tags <img src="assets/icon-set/angle-down.svg"> </div>
+        </div>
+      </div>
+      <div class="headers-block">
+        <div class="head-item">
+          <div class="tbl-right-actions">
+            <label>Filter</label> 
+            <img src="assets/icon-set/filter.svg">
+          </div>
+        </div>
+        <div class="head-item">
+          <div class="tbl-right-actions">
+            <img src="assets/icon-set/list.svg">
+          </div>
+        </div>
+        <div class="head-item">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table">
+    <div class="thead">
+      <div class="tr">
+        <div class="th">Person</div>
+        <div class="th">Age</div>
+        <div class="th">Gender</div>
+        <div class="th">Phone Number</div>
+        <div class="th">Email Address</div>
+        <div class="th"></div>
+      </div>
+    </div>
+
+    <div class="tbody">
+      <div *ngFor="let person of people" class="tr">
+        <div class="td td-user">
+          <div class="td-img-wrap">
+            <img src="">
+          </div>
+          <span>{{person.firstname}} {{person.lastname}}</span>
+        </div>
+        <div class="td">{{person.age}}</div>
+        <div class="td">{{person.gender}}</div>
+        <div class="td">{{person.phone}}</div>
+        <div class="td">{{person.email}}</div>
+        <div class="td td-actions"><img src="assets/icon-set/elipsis-v.svg">
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
