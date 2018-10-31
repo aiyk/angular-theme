@@ -7,12 +7,13 @@ import { SystemColorsComponent } from './system-colors/system-colors.component';
 import { ShadowDefComponent } from './shadow-def/shadow-def.component';
 import { TablesDefComponent } from './tables-def/tables-def.component';
 import { ButtonsDefComponent } from './buttons-def/buttons-def.component';
+import { FormElementsComponent } from './form-elements/form-elements.component';
 
 @NgModule({
   imports: [
     CommonModule,
     DesignSystemDocumentationRoutingModule
   ],
-  declarations: [DesignSystemBaseComponent, SystemColorsComponent, ShadowDefComponent, TablesDefComponent, ButtonsDefComponent]
+  declarations: [DesignSystemBaseComponent, SystemColorsComponent, ShadowDefComponent, TablesDefComponent, ButtonsDefComponent, FormElementsComponent]
 })
 export class DesignSystemDocumentationModule { }
