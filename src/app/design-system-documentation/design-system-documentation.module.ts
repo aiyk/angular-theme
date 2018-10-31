@@ -8,12 +8,13 @@ import { ShadowDefComponent } from './shadow-def/shadow-def.component';
 import { TablesDefComponent } from './tables-def/tables-def.component';
 import { ButtonsDefComponent } from './buttons-def/buttons-def.component';
 import { FormElementsComponent } from './form-elements/form-elements.component';
+import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 
 @NgModule({
   imports: [
     CommonModule,
     DesignSystemDocumentationRoutingModule
   ],
-  declarations: [DesignSystemBaseComponent, SystemColorsComponent, ShadowDefComponent, TablesDefComponent, ButtonsDefComponent, FormElementsComponent]
+  declarations: [DesignSystemBaseComponent, SystemColorsComponent, ShadowDefComponent, TablesDefComponent, ButtonsDefComponent, FormElementsComponent, DropdownMenuComponent]
 })
 export class DesignSystemDocumentationModule { }

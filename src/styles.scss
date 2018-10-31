@@ -167,6 +167,9 @@ input {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  img{
+    cursor: pointer; 
+  }
 }
 .td-user{
   display: flex;
@@ -365,12 +368,6 @@ button{
   background-color: transparent;
   border: 0.1rem solid var(--hollow-button-border);
   color: var(--text-primary);
-  &:hover{
-    background-color: var(--hollow-button-hover-bg);
-  }
-  &:active{
-    background-color: var(--hollow-button-border);
-  }
 }
 .btn-white{
   background-color: var(--white); 
@@ -446,17 +443,17 @@ button{
 .btn-plus-left{
   background-repeat: no-repeat;
   background-position: 10% center;
-  background-image: url("assets/icon-set/plus.svg");
+  background-image: url("assets/icon-set/plus-white.svg");
 }
 .btn-plus-right{
   background-repeat: no-repeat;
   background-position: 90% center;
-  background-image: url("assets/icon-set/plus.svg");
+  background-image: url("assets/icon-set/plus-white.svg");
 }
 .btn-plus-center{
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("assets/icon-set/plus.svg");
+  background-image: url("assets/icon-set/plus-white.svg");
 }
 .btn-filter-left{
   background-repeat: no-repeat;
@@ -492,4 +489,41 @@ button{
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url("assets/icon-set/elipsis-v.svg");
+}
+
+/***** DROP DOWN MENU STYLE RULES *****/
+.dropdown-wrap{
+  position: relative;
+  .dropdown-menu{
+    @extend .shadow-x5;
+    display: block;
+    position: absolute;
+    width: max-content;
+    right: 0;
+    top: 2.3rem; 
+    z-index: 1;
+    background-color: var(--white);
+    padding: 0.3rem 0; 
+    li{
+      cursor: pointer;
+      padding: 0.3rem 2rem; 
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--bg-grey-light);
+      min-height: 3rem; 
+      &:hover{
+        background-color: var(--bg-grey-lighter); 
+      }
+      img{
+        margin-right: 1rem; 
+        display: inline;
+      }
+    }
+    .ddmenu-active{
+      color: var(--primary-button-color); 
+    }
+  }
+}
+.clickable{
+  cursor: pointer;
 }
