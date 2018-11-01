@@ -1,0 +1,21 @@
+.dropdown-wrap {
+    width: 119px;
+}
+.dropdown-wrap .dropdown-menu{
+    top: 0; 
+}
+.pg-x2{
+    display: flex;
+    margin-bottom: 5rem;
+    .x2-item:first-child{ 
+        display: flex;
+        justify-content: center;    
+        margin-right: 2rem; 
+        min-width: 30%;
+        border: 1rem solid var(--white);
+        min-height: 40rem;
+    }
+    .x2-item:last-child{
+        width: 100%;
+    }
+}

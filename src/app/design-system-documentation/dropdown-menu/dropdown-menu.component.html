@@ -1,3 +1,83 @@
-<p>
-  dropdown-menu works!
-</p>
+<section class="block-element">
+  <div class="sect-title">Drop Down Menu</div>
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div>
+        <button (click)="tags_onclick()" class="btn-hollow btn-list-center btn-x0"></button>
+        <div class="dropdown-wrap">
+          <ul (click)="tags_onclick()" *ngIf="ddmenu_tags" class="dropdown-menu">
+            <li>Date Created</li>
+            <li class="ddmenu-active">Tags</li>
+            <li>Alphabetical</li>
+            <li>Email</li>
+            <li>Age</li>
+            <li>Person</li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+    <div class="x2-item">
+      <ul class="tab-menus">
+        <li [class.active-tab]="ishtml" (click)="htmltab()">HTML</li> 
+        <li [class.active-tab]="iscss" (click)="csstab()">CSS</li> 
+        <li [class.active-tab]="ists" (click)="tstab()">TS</li>
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="ishtml">
+          <code class="html">{{htmlcode}}</code>
+        </pre>
+  
+        <pre *ngIf="iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="ists">
+          <code class="ts">
+            {{tscode}}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div>
+        <button (click)="tags_onclick2()" class="btn-hollow btn-elipsis-v-center btn-x0"></button> 
+        <div class="dropdown-wrap">
+          <ul (click)="tags_onclick2()" *ngIf="ddmenu_tags2" class="dropdown-menu">
+            <li><img src="assets/icon-set/edit.svg"> Edit </li>
+            <li><img src="assets/icon-set/trash.svg"> Delete</li>
+            <li><img src="assets/icon-set/Duplicate.svg"> Duplicate</li> 
+          </ul>
+        </div> 
+      </div>
+    </div>
+
+    <div class="x2-item">
+      <ul class="tab-menus">
+        <li [class.active-tab]="ishtml2" (click)="htmltab2()">HTML</li> 
+        <li [class.active-tab]="iscss2" (click)="csstab2()">CSS</li> 
+        <li [class.active-tab]="ists2" (click)="tstab2()">TS</li>
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="ishtml2">
+          <code class="html">{{htmlcode}}</code>
+        </pre>
+  
+        <pre *ngIf="iscss2">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="ists2">
+          <code class="ts">
+            {{tscode2}}
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+</section>
