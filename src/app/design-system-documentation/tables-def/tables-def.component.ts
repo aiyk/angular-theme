@@ -9,6 +9,10 @@ export class TablesDefComponent implements OnInit {
   ddmenu_tags = false;
   ddmenu_tblmenu = false;
   ddmenu_tblitem = false;
+  ishtml = true;
+  ists = false;
+  iscss = false;
+
   htmlcode=`
   <section class="block-element">
     <div class="sect-title">
@@ -92,7 +96,44 @@ export class TablesDefComponent implements OnInit {
         </div>
       </div>
     </div>
-  </section>`
+  </section>`;
+
+  tscode=`
+  people: any[] = [
+    {
+      firstname: "Ikechukwu",
+      lastname: "Ekwe",
+      age: "22yrs",
+      gender: "Male",
+      phone: "08143492211",
+      email: "aiyk.ekwe@gmail.com"
+    },
+    {
+      firstname: "Ikechukwu",
+      lastname: "Ekwe",
+      age: "22yrs",
+      gender: "Male",
+      phone: "08143492211",
+      email: "aiyk.ekwe@gmail.com"
+    },
+    {
+      firstname: "Ikechukwu",
+      lastname: "Ekwe",
+      age: "22yrs",
+      gender: "Male",
+      phone: "08143492211",
+      email: "aiyk.ekwe@gmail.com"
+    },
+    {
+      firstname: "Ikechukwu",
+      lastname: "Ekwe",
+      age: "22yrs",
+      gender: "Male",
+      phone: "08143492211",
+      email: "aiyk.ekwe@gmail.com"
+    }
+  ];
+  `;
   people: any[] = [
     {
       firstname: "Ikechukwu",
@@ -145,5 +186,20 @@ export class TablesDefComponent implements OnInit {
   tblmenuitem_onclick(itemIndex) {
     this.clickItemIndex = itemIndex;
     this.ddmenu_tblitem = !this.ddmenu_tblitem;
+  }
+  htmltab(){
+    this.ishtml = true;
+    this.iscss = false;
+    this.ists = false;
+  }
+  csstab(){
+    this.ishtml = false;
+    this.iscss = true;
+    this.ists = false;
+  }
+  tstab(){
+    this.ishtml = false;
+    this.iscss = false;
+    this.ists = true;
   }
 }

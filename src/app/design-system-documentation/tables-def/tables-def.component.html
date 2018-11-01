@@ -86,14 +86,24 @@
   <div class="sect-title">Source Code</div>
 
   <ul class="tab-menus">
-    <li class="active-tab">HTML</li>
-    <li>CSS</li> 
-    <li>TS</li>
+    <li [class.active-tab]="ishtml" (click)="htmltab()">HTML</li> 
+    <li [class.active-tab]="iscss" (click)="csstab()">CSS</li> 
+    <li [class.active-tab]="ists" (click)="tstab()">TS</li>
   </ul>
 
   <div class="tab-contents">
-      <pre>
+      <pre *ngIf="ishtml">
         <code class="html">{{htmlcode}}</code>
+      </pre>
+
+      <pre *ngIf="iscss">
+        <code class="css"></code>
+      </pre>
+
+      <pre *ngIf="ists">
+        <code class="ts">
+          {{tscode}}
+        </code>
       </pre>
   </div>
   
