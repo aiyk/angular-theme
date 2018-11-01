@@ -527,3 +527,30 @@ button{
 .clickable{
   cursor: pointer;
 }
+code{
+  background-color: var(--bg-grey-light);
+}
+.tab-menus{
+  display: flex;
+  border-bottom: 1px solid var(--bg-grey-dark);  
+  li{
+    cursor: pointer;
+    padding: 1rem;
+    border-bottom: 3px solid transparent;
+  }
+  .active-tab{
+    border-bottom: 3px solid var(--primary-button-color); 
+  }
+}
+.tab-contents{
+  margin-top: -38px;
+  pre{
+    padding: 0;
+    border-radius: .25rem;
+    margin: 3rem 0;
+    code{
+      line-height: 1.9;
+      font-size: 1.4rem;
+    }
+  } 
+}

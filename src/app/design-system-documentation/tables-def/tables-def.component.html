@@ -71,13 +71,30 @@
           <button (click)="tblmenuitem_onclick(i)" class="btn-hollow btn-elipsis-v-center btn-x0"></button> 
           <div class="dropdown-wrap">
             <ul (click)="tblmenuitem_onclick('')" *ngIf="item_to_show(i)" class="dropdown-menu">
-              <li><img src="assets/icon-set/plus.svg"> Add New </li>
-              <li><img src="assets/icon-set/file.svg"> Upload Excel File</li>
-              <li><img src="assets/icon-set/folder.svg"> Import CSV File</li> 
+              <li><img src="assets/icon-set/edit.svg"> Edit </li>
+              <li><img src="assets/icon-set/trash.svg"> Delete</li>
+              <li><img src="assets/icon-set/Duplicate.svg"> Duplicate</li> 
             </ul>
           </div> 
         </div> 
       </div>
     </div>
   </div>
+</section>
+
+<section class="block-element">
+  <div class="sect-title">Source Code</div>
+
+  <ul class="tab-menus">
+    <li class="active-tab">HTML</li>
+    <li>CSS</li> 
+    <li>TS</li>
+  </ul>
+
+  <div class="tab-contents">
+      <pre>
+        <code class="html">{{htmlcode}}</code>
+      </pre>
+  </div>
+  
 </section>
