@@ -1,0 +1,23 @@
+.pg-x2{
+    display: flex;
+    margin-bottom: 5rem;
+    .x2-item:first-child{   
+        margin-right: 2rem; 
+        min-width: 30%;
+        border: 1rem solid var(--white);
+        min-height: 40rem;
+        input{
+            display: block;
+            margin: 20px;
+            width: 80%;
+        }
+    }
+    .x2-item:last-child{
+    }
+}
+.search-wrap{
+    margin: 20px;
+    input{
+        margin: 0 !important;
+    }
+}
