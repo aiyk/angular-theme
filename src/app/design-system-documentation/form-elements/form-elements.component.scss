@@ -6,13 +6,19 @@
         min-width: 30%;
         border: 1rem solid var(--white);
         min-height: 40rem;
-        input{
+        .form-group {
+            width: 80%;
+            margin: 20px;
+            input, textarea{
+                width: 100% !important;
+                margin: 0 !important; 
+            }
+        }
+        input, textarea{
             display: block;
             margin: 20px;
             width: 80%;
         }
-    }
-    .x2-item:last-child{
     }
 }
 .search-wrap{
