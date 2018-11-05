@@ -9,12 +9,13 @@ import { TablesDefComponent } from './tables-def/tables-def.component';
 import { ButtonsDefComponent } from './buttons-def/buttons-def.component';
 import { FormElementsComponent } from './form-elements/form-elements.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { AlertDefComponent } from './alert-def/alert-def.component';
 
 @NgModule({
   imports: [
     CommonModule,
     DesignSystemDocumentationRoutingModule
   ],
-  declarations: [DesignSystemBaseComponent, SystemColorsComponent, ShadowDefComponent, TablesDefComponent, ButtonsDefComponent, FormElementsComponent, DropdownMenuComponent]
+  declarations: [DesignSystemBaseComponent, SystemColorsComponent, ShadowDefComponent, TablesDefComponent, ButtonsDefComponent, FormElementsComponent, DropdownMenuComponent, AlertDefComponent]
 })
 export class DesignSystemDocumentationModule { }

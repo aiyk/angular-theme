@@ -7,6 +7,7 @@ import { TablesDefComponent } from './tables-def/tables-def.component';
 import { ButtonsDefComponent } from './buttons-def/buttons-def.component';
 import { FormElementsComponent } from './form-elements/form-elements.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { AlertDefComponent } from './alert-def/alert-def.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'colors' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'tables', component: TablesDefComponent },
   { path: 'buttons', component: ButtonsDefComponent },
   { path: 'form-elements', component: FormElementsComponent },
-  { path: 'drop-down-menu', component: DropdownMenuComponent }
+  { path: 'drop-down-menu', component: DropdownMenuComponent },
+  { path: 'alerts', component: AlertDefComponent } 
 ];
 
 @NgModule({
