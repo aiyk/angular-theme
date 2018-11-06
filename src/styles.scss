@@ -284,7 +284,6 @@ input[type=password] {
   background-repeat: no-repeat;
   background-position: 95% 50%;
   background-image: url("assets/icon-set/eye.svg");
-  cursor: pointer;
 }
 
 .checkbox {
@@ -594,4 +593,32 @@ pre{
 }
 code{
   background-color: var(--bg-grey-light);
+}
+
+.pg-x2{
+  display: flex;
+  margin-bottom: 2rem;
+  .x2-item:last-child{
+    min-width: 50%; 
+  }
+  .x2-item:first-child{  
+      position: relative; 
+      margin-right: 2rem; 
+      min-width: 30%;
+      border: 1rem solid var(--white);
+      height: fit-content; 
+      .form-group {
+          width: 80%;
+          margin: 20px;
+          input, textarea{
+              width: 100% !important;
+              margin: 0 !important; 
+          }
+      }
+      input, textarea{
+          display: block;
+          margin: 20px;
+          width: 80%;
+      }
+  }
 }

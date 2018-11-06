@@ -1,26 +1,4 @@
-.pg-x2{
-    display: flex;
-    margin-bottom: 5rem;
-    .x2-item:first-child{   
-        margin-right: 2rem; 
-        min-width: 30%;
-        border: 1rem solid var(--white);
-        min-height: 40rem;
-        .form-group {
-            width: 80%;
-            margin: 20px;
-            input, textarea{
-                width: 100% !important;
-                margin: 0 !important; 
-            }
-        }
-        input, textarea{
-            display: block;
-            margin: 20px;
-            width: 80%;
-        }
-    }
-}
+
 .search-wrap{
     margin: 20px;
     input{

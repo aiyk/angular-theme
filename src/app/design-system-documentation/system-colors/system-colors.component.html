@@ -13,8 +13,8 @@
     <div class="tbody">
       <div *ngFor="let color of colors" class="tr">
         <div class="td">
-          <input type="color" id="background-color" [value]="color.colorCode">
-          <!-- <div [ngStyle]="{'background-color':color.colorCode}" class="show-color"></div> -->
+          <!-- <input type="color" id="background-color" [value]="color.colorCode"> -->
+          <div [ngStyle]="{'background-color':color.colorCode}" class="show-color"></div>
         </div>
         <div class="td">
           <code>{{color.variableName}}</code>
