@@ -8,21 +8,21 @@
     <div class="x2-item">
 
       <ul class="tab-menus">
-        <li [class.active-tab]="ishtml" (click)="htmltab()">HTML</li> 
-        <li [class.active-tab]="iscss" (click)="csstab()">CSS</li> 
-        <li [class.active-tab]="ists" (click)="tstab()">TS</li>
+        <li [class.active-tab]="input_ishtml" (click)="htmltab('input_error')">HTML</li> 
+        <li [class.active-tab]="input_iscss" (click)="csstab('input_error')">CSS</li> 
+        <li [class.active-tab]="input_ists" (click)="tstab('input_error')">TS</li>
       </ul>
     
       <div class="tab-contents">
-        <pre *ngIf="ishtml">
-          <code class="html">{{snippet}}</code> 
+        <pre *ngIf="input_ishtml">
+          <code class="html">{{input_snippet}}</code> 
         </pre>
   
-        <pre *ngIf="iscss">
+        <pre *ngIf="input_iscss">
           <code class="css"></code>
         </pre>
   
-        <pre *ngIf="ists">
+        <pre *ngIf="input_ists">
           <code class="ts"></code>
         </pre>
       </div>
@@ -37,21 +37,21 @@
     <div class="x2-item">
 
       <ul class="tab-menus">
-        <li [class.active-tab]="ishtml" (click)="htmltab()">HTML</li> 
-        <li [class.active-tab]="iscss" (click)="csstab()">CSS</li> 
-        <li [class.active-tab]="ists" (click)="tstab()">TS</li>
+        <li [class.active-tab]="errLite_ishtml" (click)="htmltab('notification_err_lite')">HTML</li> 
+        <li [class.active-tab]="errLite_iscss" (click)="csstab('notification_err_lite')">CSS</li> 
+        <li [class.active-tab]="errLite_ists" (click)="tstab('notification_err_lite')">TS</li>
       </ul>
     
       <div class="tab-contents">
-        <pre *ngIf="ishtml">
-          <code class="html">{{error}}</code> 
+        <pre *ngIf="errLite_ishtml">
+          <code class="html">{{notification_errLite_snippet}}</code>  
         </pre>
   
-        <pre *ngIf="iscss">
+        <pre *ngIf="errLite_iscss">
           <code class="css"></code>
         </pre>
   
-        <pre *ngIf="ists">
+        <pre *ngIf="errLite_ists">
           <code class="ts"></code>
         </pre>
       </div>
@@ -66,21 +66,21 @@
     <div class="x2-item">
 
       <ul class="tab-menus">
-        <li [class.active-tab]="ishtml" (click)="htmltab()">HTML</li> 
-        <li [class.active-tab]="iscss" (click)="csstab()">CSS</li> 
-        <li [class.active-tab]="ists" (click)="tstab()">TS</li>
+        <li [class.active-tab]="infoLite_ishtml" (click)="htmltab('notification_info_lite')">HTML</li> 
+        <li [class.active-tab]="infoLite_iscss" (click)="csstab('notification_info_lite')">CSS</li> 
+        <li [class.active-tab]="infoLite_ists" (click)="tstab('notification_info_lite')">TS</li>
       </ul>
     
       <div class="tab-contents">
-        <pre *ngIf="ishtml">
-          <code class="html">{{info}}</code> 
+        <pre *ngIf="infoLite_ishtml">
+          <code class="html">{{notification_infoLite_snippet}}</code> 
         </pre>
   
-        <pre *ngIf="iscss">
+        <pre *ngIf="infoLite_iscss">
           <code class="css"></code>
         </pre>
   
-        <pre *ngIf="ists">
+        <pre *ngIf="infoLite_ists">
           <code class="ts"></code>
         </pre>
       </div>
