@@ -69,7 +69,7 @@
         <li [class.active-tab]="infoLite_ishtml" (click)="htmltab('notification_info_lite')">HTML</li> 
         <li [class.active-tab]="infoLite_iscss" (click)="csstab('notification_info_lite')">CSS</li> 
         <li [class.active-tab]="infoLite_ists" (click)="tstab('notification_info_lite')">TS</li>
-      </ul>
+      </ul> 
     
       <div class="tab-contents">
         <pre *ngIf="infoLite_ishtml">
@@ -81,6 +81,35 @@
         </pre>
   
         <pre *ngIf="infoLite_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification default-alert-success">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus"> 
+        <li [class.active-tab]="successLite_ishtml" (click)="htmltab('notification_success_lite')">HTML</li> 
+        <li [class.active-tab]="successLite_iscss" (click)="csstab('notification_success_lite')">CSS</li> 
+        <li [class.active-tab]="successLite_ists" (click)="tstab('notification_success_lite')">TS</li>
+      </ul> 
+    
+      <div class="tab-contents">
+        <pre *ngIf="successLite_ishtml">
+          <code class="html">{{notification_successLite_snippet}}</code> 
+        </pre>
+  
+        <pre *ngIf="successLite_iscss"> 
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="successLite_ists">
           <code class="ts"></code>
         </pre>
       </div>

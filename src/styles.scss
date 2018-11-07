@@ -617,9 +617,11 @@ code{
 /**** Alerts and Notifications ****/
 .notification{
   padding: 1rem;
-  padding-left: 4rem;
+  padding-left: 4.5rem;
   box-sizing: border-box;
   min-width: 30rem;
+  background-repeat: no-repeat;
+  background-position: 5% 50%; 
 }
 .input-error{
   @extend .shadow-x5; 
@@ -627,23 +629,23 @@ code{
   width: 100%;
   margin-top: 1px;
   color: var(--error); 
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
   background-image: url("assets/icon-set/warning-triangle-red.svg");
 }
 .default-alert-err{
   background-color: var(--error-lite);
   margin: 2px 0;
   color: var(--error); 
-  background-repeat: no-repeat;
-  background-position: 5% 50%; 
   background-image: url("assets/icon-set/warning-triangle-red.svg");
 }
 .default-alert-info{
   background-color: var(--color-blue-lite);
   margin: 2px 0;
   color: var(--brand-primary); 
-  background-repeat: no-repeat;
-  background-position: 5% 50%; 
   background-image: url("assets/icon-set/info-blue.svg");
+}
+.default-alert-success{
+  background-color: var(--color-green-lite);
+  margin: 2px 0;
+  color: var(--success); 
+  background-image: url("assets/icon-set/check-circular-green.svg");
 }

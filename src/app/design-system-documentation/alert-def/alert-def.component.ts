@@ -19,6 +19,10 @@ export class AlertDefComponent implements OnInit {
   infoLite_ists = false;
   infoLite_iscss = false;
 
+  successLite_ishtml = true;
+  successLite_ists = false;
+  successLite_iscss = false;
+
   input_snippet = `
   <div class="form-group">
     <div class="notification input-error">You have a big buggy bug here!!!</div>
@@ -31,6 +35,10 @@ export class AlertDefComponent implements OnInit {
 
   notification_infoLite_snippet = `
   <div class="notification default-alert-info">Your alert message goes here</div>
+  `;
+
+  notification_successLite_snippet = `
+  <div class="notification default-alert-success">Your alert message goes here</div>
   `;
 
   constructor() { }
@@ -51,6 +59,10 @@ export class AlertDefComponent implements OnInit {
       this.infoLite_ishtml = true;
       this.infoLite_ists = false;
       this.infoLite_iscss = false;
+    } else if(target==='notification_success_lite'){
+      this.successLite_ishtml = true;
+      this.successLite_ists = false;
+      this.successLite_iscss = false;
     }
   }
   csstab(target){
@@ -66,6 +78,10 @@ export class AlertDefComponent implements OnInit {
       this.infoLite_ishtml = false;
       this.infoLite_iscss = true;
       this.infoLite_ists = false;
+    } else if(target==='notification_success_lite'){
+      this.successLite_ishtml = false;
+      this.successLite_iscss = true;
+      this.successLite_ists = false;
     }
   }
   tstab(target){
@@ -81,6 +97,10 @@ export class AlertDefComponent implements OnInit {
       this.infoLite_ishtml = false;
       this.infoLite_iscss = false;
       this.infoLite_ists = true;
+    } else if(target==='notification_success_lite'){
+      this.successLite_ishtml = false;
+      this.successLite_iscss = false;
+      this.successLite_ists = true;
     }
   }
 
