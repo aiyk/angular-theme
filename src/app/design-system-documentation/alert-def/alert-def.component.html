@@ -2,9 +2,7 @@
   <div class="sect-title">Alerts and Notifications</div>  
   <div class="pg-x2">
     <div class="x2-item">
-      <div class="form-group">
-        <div class="input-error">You have a big buggy bug here!!!</div>
-      </div>
+      <div class="notification input-error">You have a big buggy bug here!!!</div>
     </div>
 
     <div class="x2-item">
@@ -33,9 +31,7 @@
 
   <div class="pg-x2">
     <div class="x2-item">
-      <div class="form-group">
-        <div class="input-error">You have a big buggy bug here!!!</div>
-      </div>
+      <div class="notification default-alert-err">Your alert message goes here</div>
     </div>
 
     <div class="x2-item">
@@ -48,7 +44,36 @@
     
       <div class="tab-contents">
         <pre *ngIf="ishtml">
-          <code class="html">{{snippet}}</code> 
+          <code class="html">{{error}}</code> 
+        </pre>
+  
+        <pre *ngIf="iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification default-alert-info">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus">
+        <li [class.active-tab]="ishtml" (click)="htmltab()">HTML</li> 
+        <li [class.active-tab]="iscss" (click)="csstab()">CSS</li> 
+        <li [class.active-tab]="ists" (click)="tstab()">TS</li>
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="ishtml">
+          <code class="html">{{info}}</code> 
         </pre>
   
         <pre *ngIf="iscss">

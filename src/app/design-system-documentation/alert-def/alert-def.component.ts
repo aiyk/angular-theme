@@ -13,7 +13,7 @@ export class AlertDefComponent implements OnInit {
 
   snippet = `
   <div class="form-group">
-    <div class="input-error">You have a big buggy bug here!!!</div>
+    <div class="notification input-error">You have a big buggy bug here!!!</div>
   </div>
   `;
 

@@ -8,7 +8,7 @@
   --success: #22ce8b;
   --success-lite: lighten(var(--success), 10%);
   --error: #f46363;
-  --error-lite: lighten(var(--error), 10%);
+  --error-lite: rgba(245, 109, 109, 0.1);
   --warning: #ffcd54;
   --warning: lighten(var(--warning), 10%);
 
@@ -25,6 +25,10 @@
   --bg-grey-medium: #e6eaf0;
   --bg-grey-light: #f0f2f7;
   --bg-grey-lighter: #f9fafc;
+
+  --color-blue-lite: rgba(0, 110, 255, 0.1);
+  --color-green-lite: rgba(34, 206, 139, 0.1);
+  --color-orange-lite: rgba(255, 173, 48, 0.1);
 
   --main-bg-color: var(--bg-grey-light);
 
@@ -211,22 +215,9 @@ li {
 .form-group{
   position: relative;
   box-sizing: border-box;
-  min-width: 300px;
+  min-width: 30rem;  
   input, textarea{
     margin: 0 !important;  
-  }
-  .input-error{
-    @extend .shadow-x5; 
-    background-color: var(--white);
-    padding: 1rem;
-    padding-left: 4rem;
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: 1px;
-    color: var(--error); 
-    background-repeat: no-repeat;
-    background-position: 5% 50%;
-    background-image: url("assets/icon-set/warning-triangle-red.svg");
   }
 }
 input, textarea {
@@ -621,4 +612,38 @@ code{
           width: 80%;
       }
   }
+}
+
+/**** Alerts and Notifications ****/
+.notification{
+  padding: 1rem;
+  padding-left: 4rem;
+  box-sizing: border-box;
+  min-width: 30rem;
+}
+.input-error{
+  @extend .shadow-x5; 
+  background-color: var(--white);
+  width: 100%;
+  margin-top: 1px;
+  color: var(--error); 
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-image: url("assets/icon-set/warning-triangle-red.svg");
+}
+.default-alert-err{
+  background-color: var(--error-lite);
+  margin: 2px 0;
+  color: var(--error); 
+  background-repeat: no-repeat;
+  background-position: 5% 50%; 
+  background-image: url("assets/icon-set/warning-triangle-red.svg");
+}
+.default-alert-info{
+  background-color: var(--color-blue-lite);
+  margin: 2px 0;
+  color: var(--brand-primary); 
+  background-repeat: no-repeat;
+  background-position: 5% 50%; 
+  background-image: url("assets/icon-set/info-blue.svg");
 }

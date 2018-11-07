@@ -26,7 +26,7 @@ export class FormElementsComponent implements OnInit {
 
   <div class="form-group">
     <input class="input-invalid" type="text" placeholder="Enter some text">
-    <div class="input-error">You have a big buggy bug here!!!</div>
+    <div class="notification input-error">You have a big buggy bug here!!!</div>
   </div>
   `;
 
