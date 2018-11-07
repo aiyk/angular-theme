@@ -10,7 +10,6 @@
   --error: #f46363;
   --error-lite: rgba(245, 109, 109, 0.1);
   --warning: #ffcd54;
-  --warning: lighten(var(--warning), 10%);
 
   /*Text Colors*/
   --text-primary: #040e28;
@@ -648,4 +647,35 @@ code{
   margin: 2px 0;
   color: var(--success); 
   background-image: url("assets/icon-set/check-circular-green.svg");
+}
+.default-alert-warning{
+  background-color: var(--color-orange-lite);
+  margin: 2px 0;
+  color: var(--warning); 
+  background-image: url("assets/icon-set/warning-triangle-yellow.svg");
+}
+/**dismisable notifications**/
+.dismisable-alert-err{
+  background-color: var(--error);
+  margin: 2px 0;
+  color: var(--white); 
+  background-image: url("assets/icon-set/warning-triangle-white.svg");
+}
+.dismisable-alert-info{
+  background-color: var(--brand-primary);
+  margin: 2px 0;
+  color: var(--white); 
+  background-image: url("assets/icon-set/info-white.svg");
+}
+.dismisable-alert-success{
+  background-color: var(--success);
+  margin: 2px 0;
+  color: var(--white); 
+  background-image: url("assets/icon-set/check-white.svg");
+}
+.dismisable-alert-warning{
+  background-color: var(--warning);
+  margin: 2px 0;
+  color: var(--white);  
+  background-image: url("assets/icon-set/warning-triangle-white.svg");
 }

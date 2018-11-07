@@ -1,5 +1,5 @@
 <section class="block-element">
-  <div class="sect-title">Alerts and Notifications</div>  
+  <div class="sect-title">Default Notifications</div>  
   <div class="pg-x2">
     <div class="x2-item">
       <div class="notification input-error">You have a big buggy bug here!!!</div>
@@ -110,6 +110,155 @@
         </pre>
   
         <pre *ngIf="successLite_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification default-alert-warning">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus"> 
+        <li [class.active-tab]="warningLite_ishtml" (click)="htmltab('notification_warning_lite')">HTML</li> 
+        <li [class.active-tab]="warningLite_iscss" (click)="csstab('notification_warning_lite')">CSS</li> 
+        <li [class.active-tab]="warningLite_ists" (click)="tstab('notification_warning_lite')">TS</li>
+      </ul> 
+    
+      <div class="tab-contents">
+        <pre *ngIf="warningLite_ishtml">
+          <code class="html">{{notification_warningLite_snippet}}</code> 
+        </pre>
+  
+        <pre *ngIf="warningLite_iscss"> 
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="warningLite_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<section class="block-element">
+  <div class="sect-title">Dismisable Notifications</div>  
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification dismisable-alert-err">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus">
+        <li [class.active-tab]="err_ishtml" (click)="htmltab('notification_err')">HTML</li> 
+        <li [class.active-tab]="err_iscss" (click)="csstab('notification_err')">CSS</li> 
+        <li [class.active-tab]="err_ists" (click)="tstab('notification_err')">TS</li>
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="err_ishtml">
+          <code class="html">{{notification_err_snippet}}</code>  
+        </pre>
+  
+        <pre *ngIf="err_iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="err_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification dismisable-alert-info">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus">
+        <li [class.active-tab]="info_ishtml" (click)="htmltab('notification_info')">HTML</li> 
+        <li [class.active-tab]="info_iscss" (click)="csstab('notification_info')">CSS</li> 
+        <li [class.active-tab]="info_ists" (click)="tstab('notification_info')">TS</li>
+      </ul> 
+    
+      <div class="tab-contents">
+        <pre *ngIf="info_ishtml">
+          <code class="html">{{notification_info_snippet}}</code> 
+        </pre>
+  
+        <pre *ngIf="info_iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="info_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification dismisable-alert-success">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus"> 
+        <li [class.active-tab]="success_ishtml" (click)="htmltab('notification_success')">HTML</li> 
+        <li [class.active-tab]="success_iscss" (click)="csstab('notification_success')">CSS</li> 
+        <li [class.active-tab]="success_ists" (click)="tstab('notification_success')">TS</li>
+      </ul> 
+    
+      <div class="tab-contents">
+        <pre *ngIf="success_ishtml">
+          <code class="html">{{notification_success_snippet}}</code> 
+        </pre>
+  
+        <pre *ngIf="success_iscss"> 
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="success_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="notification dismisable-alert-warning">Your alert message goes here</div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus">  
+        <li [class.active-tab]="warning_ishtml" (click)="htmltab('notification_warning')">HTML</li> 
+        <li [class.active-tab]="warning_iscss" (click)="csstab('notification_warning')">CSS</li> 
+        <li [class.active-tab]="warning_ists" (click)="tstab('notification_warning')">TS</li>
+      </ul> 
+    
+      <div class="tab-contents">
+        <pre *ngIf="warning_ishtml">
+          <code class="html">{{notification_warning_snippet}}</code> 
+        </pre>
+  
+        <pre *ngIf="warning_iscss"> 
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="warning_ists">
           <code class="ts"></code>
         </pre>
       </div>
