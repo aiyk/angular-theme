@@ -655,27 +655,45 @@ code{
   background-image: url("assets/icon-set/warning-triangle-yellow.svg");
 }
 /**dismisable notifications**/
+.notify-dismis{
+  position: absolute;
+  right: 0; 
+  content: url("assets/icon-set/times-white.svg"); 
+  cursor: pointer;
+}
 .dismisable-alert-err{
   background-color: var(--error);
   margin: 2px 0;
-  color: var(--white); 
+  color: var(--white);  
   background-image: url("assets/icon-set/warning-triangle-white.svg");
+  &::before{
+    @extend .notify-dismis;
+  }
 }
 .dismisable-alert-info{
   background-color: var(--brand-primary);
   margin: 2px 0;
   color: var(--white); 
   background-image: url("assets/icon-set/info-white.svg");
+  &::before{
+    @extend .notify-dismis;
+  }
 }
 .dismisable-alert-success{
   background-color: var(--success);
   margin: 2px 0;
   color: var(--white); 
   background-image: url("assets/icon-set/check-white.svg");
+  &::before{
+    @extend .notify-dismis;
+  }
 }
 .dismisable-alert-warning{
   background-color: var(--warning);
   margin: 2px 0;
   color: var(--white);  
   background-image: url("assets/icon-set/warning-triangle-white.svg");
+  &::before{
+    @extend .notify-dismis;
+  }
 }

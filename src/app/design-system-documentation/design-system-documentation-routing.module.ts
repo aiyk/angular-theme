@@ -8,6 +8,7 @@ import { ButtonsDefComponent } from './buttons-def/buttons-def.component';
 import { FormElementsComponent } from './form-elements/form-elements.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { AlertDefComponent } from './alert-def/alert-def.component';
+import { PopupModalsComponent } from './popup-modals/popup-modals.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'colors' },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'buttons', component: ButtonsDefComponent },
   { path: 'form-elements', component: FormElementsComponent },
   { path: 'drop-down-menu', component: DropdownMenuComponent },
-  { path: 'alerts', component: AlertDefComponent } 
+  { path: 'alerts', component: AlertDefComponent } ,
+  { path: 'modals', component: PopupModalsComponent } 
 ];
 
 @NgModule({
