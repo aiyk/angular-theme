@@ -1,3 +1,88 @@
-<p>
-  popup-modals works!
-</p>
+<section class="block-element">
+  <div class="sect-title">Pop-ups / Modals</div>
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="">
+        <div class="modal m-small">
+          <div class="modal-header">
+            <div class="modal-dismis"></div>
+          </div>
+          <div class="modal-body">
+            are you sure you want to delete this file?
+          </div>
+          <div class="modal-ctas">
+            <button class="btn-red btn-x2">Delete</button>
+            <button class="btn-hollow btn-x2">Cancel</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus"> 
+        <li [class.active-tab]="confirm_ishtml" (click)="htmltab('confirm_modal')">HTML</li> 
+        <li [class.active-tab]="confirm_iscss" (click)="csstab('confirm_modal')">CSS</li> 
+        <li [class.active-tab]="confirm_ists" (click)="tstab('confirm_modal')">TS</li>
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="confirm_ishtml">
+          <code class="html">{{confirm_snippet}}</code>   
+        </pre>
+  
+        <pre *ngIf="confirm_iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="confirm_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div class="">
+        <div class="modal m-small">
+          <div class="modal-header">
+            <div class="modal-title">Modal Header</div>
+            <div class="modal-dismis"></div>
+          </div>
+          <div class="modal-body">
+            left aligned alert modal with heading. Automatically wraps when resized
+          </div>
+          <div class="modal-ctas">
+            <button class="btn-blue btn-x2">Action</button>
+            <button class="btn-hollow btn-x2">Cancel</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus"> 
+        <li [class.active-tab]="confirm_ishtml" (click)="htmltab('confirm_modal')">HTML</li> 
+        <li [class.active-tab]="confirm_iscss" (click)="csstab('confirm_modal')">CSS</li> 
+        <li [class.active-tab]="confirm_ists" (click)="tstab('confirm_modal')">TS</li>
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="confirm_ishtml">
+          <code class="html">{{modal_snippet}}</code>   
+        </pre>
+  
+        <pre *ngIf="confirm_iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="confirm_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+</section>  

@@ -590,12 +590,12 @@ code{
   margin-bottom: 2rem;
   .x2-item:last-child{
     min-width: 50%; 
+    margin-left: 2rem;
   }
   .x2-item:first-child{  
       position: relative; 
       margin-right: 2rem; 
       min-width: 30%;
-      border: 1rem solid var(--white);
       height: fit-content; 
       .form-group {
           width: 80%;
@@ -695,5 +695,66 @@ code{
   background-image: url("assets/icon-set/warning-triangle-white.svg");
   &::before{
     @extend .notify-dismis;
+  }
+}
+
+/****** modal style rules ********/
+.center-modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.modal{
+  @extend .shadow-x5; 
+  border-radius: 1.2rem;
+  background-color: var(--white);
+  border: 1px solid var(--bg-grey-dark);
+}
+.m-small {
+  width: 37.8rem;
+  min-height: 10rem;
+}
+.modal-header{
+  position: relative;
+  padding-bottom: 1.5rem;
+  box-sizing: border-box; 
+}
+.modal-dismis{
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("assets/icon-set/times.svg");
+  width: 20px;
+  height: 20px; 
+} 
+.modal-title{
+  top: 9px;
+  right: 11px;
+  background-color: var(--bg-grey-lighter);
+  display: flex;
+  align-items: center;
+  padding: 1rem; 
+  box-sizing: border-box; 
+  border-radius: 1.2rem 1.2rem 0 0;  
+}
+.modal-body{
+  padding: 1rem;
+  box-sizing: border-box; 
+}
+.modal-ctas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  button{
+    margin: 0.6rem;
   }
 }
