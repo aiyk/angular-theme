@@ -758,3 +758,27 @@ code{
     margin: 0.6rem;
   }
 }
+.tree-item{
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  line-height: 19px;
+  cursor: pointer;
+  .i-pointer, .i-folder{
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .i-close{
+    background-image: url("assets/icon-set/angle-right.svg");
+  }
+  .i-open{
+    background-image: url("assets/icon-set/angle-down.svg");
+  }
+  .i-folder{
+    background-image: url("assets/icon-set/folder.svg");
+  }
+}

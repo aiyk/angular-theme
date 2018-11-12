@@ -1,3 +1,35 @@
-<p>
-  tree-def works!
-</p>
+<section class="block-element">
+  <div class="sect-title">Tree List</div>  
+  <div class="pg-x2">
+    <div class="x2-item">
+      <div *ngFor = "let item of list; let i = index" class="tree-item">
+        <div (click)="treeItem_toggle(i)" [class.i-open] = item_to_show(i) [class.i-close] = !item_to_show(i) class="i-pointer"></div> 
+        <div class="i-folder"></div>
+        <div class="tree-label">{{item.label}} ({{item.count}})</div>
+      </div>
+    </div>
+
+    <div class="x2-item">
+
+      <ul class="tab-menus">
+        <li [class.active-tab]="tree_ishtml" (click)="htmltab()">HTML</li> 
+        <li [class.active-tab]="tree_iscss" (click)="csstab()">CSS</li> 
+        <li [class.active-tab]="tree_ists" (click)="tstab()">TS</li> 
+      </ul>
+    
+      <div class="tab-contents">
+        <pre *ngIf="tree_ishtml">
+          <code class="html">{{tree_snippet}}</code> 
+        </pre>
+  
+        <pre *ngIf="tree_iscss">
+          <code class="css"></code>
+        </pre>
+  
+        <pre *ngIf="tree_ists">
+          <code class="ts"></code>
+        </pre>
+      </div>
+    </div>
+  </div> 
+</section>
