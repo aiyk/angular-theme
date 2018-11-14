@@ -56,6 +56,15 @@ export class TreeDefComponent implements OnInit {
   treeState = false;
   clickItemIndex: number;
 
+  item_to_show(i) {
+    if(this.clickItemIndex === i && this.treeState == true) return true;
+    if(this.clickItemIndex === i && this.treeState == false) return false;
+  }
+  treeItem_toggle(itemIndex) {
+    this.clickItemIndex = itemIndex;
+    this.treeState = !this.treeState;
+  }
+
   list: any[] = [
     {
       "label": "Item A",
@@ -78,15 +87,6 @@ export class TreeDefComponent implements OnInit {
       "count": "15",
     }
   ]; 
-
-  item_to_show(i) {
-    if(this.clickItemIndex === i && this.treeState == true) return true;
-    if(this.clickItemIndex === i && this.treeState == false) return false;
-  }
-  treeItem_toggle(itemIndex) {
-    this.clickItemIndex = itemIndex;
-    this.treeState = !this.treeState;
-  }
   `;
 
   constructor() { }
